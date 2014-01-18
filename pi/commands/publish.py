@@ -14,6 +14,7 @@ def publish(execute=True, verbose=False, script_name='setup.py'):
             check_call(['pandoc', 'README.md', '-o', 'README.rst'])
 
     # print 'Tagging current version in git'
+    ## e.g., git tag -a v1.2.3 -m 1.2.3
     # subprocessor('git', 'tag', '-a', 'v' + pi.__version__, '-m', pi.__version__)
     # subprocessor('git', 'push')
 
