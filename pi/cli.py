@@ -19,8 +19,8 @@ def main():
     parser = argparse.ArgumentParser(description='Python package manipulation',
         formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('command', choices=commands, help='Command to run')
-    parser.add_argument('--version', action='version', version=pi.__version__)
-    parser.add_argument('--verbose', action='store_true', help='Print extra information')
+    parser.add_argument('-V', '--version', action='version', version=pi.__version__)
+    parser.add_argument('-v', '--verbose', action='store_true', help='Print extra information')
     opts, _ = parser.parse_known_args()
 
     loglevel = logging.DEBUG if opts.verbose else logging.INFO
