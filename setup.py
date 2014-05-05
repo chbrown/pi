@@ -11,7 +11,7 @@ def read(filepath):
 
 setup(
     name='pi',
-    version='0.1.1',
+    version='0.1.2',
     description='Simpler python package installation',
     url='https://github.com/chbrown/pi',
     author='Christopher Brown',
