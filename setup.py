@@ -1,4 +1,13 @@
+import os
 from setuptools import setup, find_packages
+
+
+def read(filepath):
+    # don't die on files that may go missing due to zipping
+    if os.path.exists(filepath):
+        return open(filepath).read()
+    return ''
+
 
 setup(
     name='pi',
@@ -7,8 +16,8 @@ setup(
     url='https://github.com/chbrown/pi',
     author='Christopher Brown',
     author_email='io@henrian.com',
-    long_description=open('README.rst').read(),
-    license=open('LICENSE').read(),
+    long_description=read('README.rst'),
+    license=read('LICENSE'),
     packages=find_packages(),
     entry_points=dict(console_scripts=[
         'pi = pi.cli:main',
